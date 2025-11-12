@@ -6,19 +6,35 @@
     <title>CSS ramverk - Lab 1</title>
     <link href="./output.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html">CSS ramverk</a>
-            <ul>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
-                <li><a href="publish.html">Publicering</a></li>
+<body class="min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-black/30"></div> <!-- Overlay -->
+    
+    <header class="relative z-10">
+        <nav class="flex flex-wrap justify-between items-center max-w-5xl mx-auto px-4 py-4">
+            <a href="index.html" class="text-2xl font-bold tracking-wide hover:text-yellow-200 transition">
+                CSS Ramverk
+            </a>
+            <ul class="flex flex-wrap justify-center gap-4 text-lg mt-3 sm:mt-0 sm:space-x-6">
+                <li><a href="tailwind.html" class="hover:text-yellow-300 transition">Tailwind</a></li>
+                <li><a href="bootstrap.html" class="hover:text-yellow-300 transition">Bootstrap</a></li>
+                <li><a href="publish.html" class="hover:text-yellow-300 transition">Publicering</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        
-    </main>   
+
+    <main class="relative z-10 flex flex-col justify-center items-center min-h-[80vh] text-center px-6">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6 drop-shadow-lg">Laboration 1: CSS-ramverk</h1>
+        <p class="max-w-2xl text-base sm:text-lg text-gray-100 mb-10">
+            Denna laboration handlar om att testa och jämföra olika CSS-ramverk.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 sm:space-x-6">
+            <a href="tailwind.html" class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-purple-100 transition">
+                Tailwind
+            </a>
+            <a href="bootstrap.html" class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-purple-100 transition">
+                Bootstrap
+            </a>
+        </div>
+    </main>  
 </body>
 </html>
