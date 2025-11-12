@@ -1,25 +1,187 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind - Lab 1</title>
-    <link href="./output.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind - Lab 1</title>
+  <link href="./output.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <nav>
-            <a>CSS ramverk</a>
-            <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
-                <li><a href="publish.html">Publicering</a></li>
+<body class="bg-gray-50">
+    <header class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-lg">
+        <nav class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center text-white">
+            <a href="index.html" class="text-xl font-bold tracking-wide hover:text-yellow-200 transition">CSS Ramverk</a>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="index.html" class="hover:text-yellow-200 transition">Hem</a></li>
+                <li><a href="tailwind.html" class="hover:text-yellow-200 transition">Tailwind</a></li>
+                <li><a href="bootstrap.html" class="hover:text-yellow-200 transition">Bootstrap</a></li>
+                <li><a href="publish.html" class="hover:text-yellow-200 transition">Publicering</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        
-    </main>    
+        <h1 class="text-center text-4xl font-bold tracking-wide text-indigo-600 mt-10 mb-6">Tailwind</h1>
+        <div class="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-2xl">
+            <div class="p-8">
+                <h2 class="font-semibold tracking-wide text-purple-600 uppercase mb-2">Om Tailwind</h2>
+                <p class="text-gray-600 mb-4">
+                    Tailwind CSS är ett modernt CSS-ramverk som bygger på så kallade utility-klasser. 
+                    I stället för att skriva egen CSS för varje komponent, kombinerar man färdiga klasser direkt i HTML-koden för att snabbt skapa responsiva och konsekventa layouter. 
+                    Läs mer på 
+                    <a href="https://tailwindcss.com" target="_blank" class="text-indigo-600 hover:underline">tailwindcss.com</a>.
+                </p>
+                <h2 class="font-semibold tracking-wide text-purple-600 uppercase mb-2">Utvärdering</h2>
+                 <p class="text-gray-600 mb-4">
+                    Jag tycker att Tailwind är ett smidigt ramverk när man vill bygga snygga gränssnitt snabbt, 
+                    särskilt eftersom man kan styla allt direkt i HTML utan att växla mellan flera filer. 
+                    Samtidigt kan koden bli lite svårläst med alla klassnamn, särskilt i större projekt. 
+                    Men för mindre sidor eller prototyper tycker jag det fungerar riktigt bra.
+                </p>
+            </div>
+        </div>
+        <div class="max-w-2xl mx-auto mt-10 mb-20 border border-gray-200 rounded-xl shadow-md overflow-hidden bg-white">
+            <div class="p-6 border-b border-gray-200 bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
+                <h2 class="text-lg font-semibold text-gray-700 mb-4">Lägg till ny rad</h2>
+                <form id="addForm">
+                    <div class="mb-4">
+                        <label for="classname" class="block text-sm font-medium text-gray-700 mb-1">Klassnamn</label>
+                        <input
+                        type="text"
+                        id="classname"
+                        name="classname"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        placeholder="Ange klassnamn..."
+                        />
+                    </div>
+                    <div class="mb-4">
+                        <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Beskrivning</label>
+                        <textarea
+                        id="description"
+                        name="description"
+                        rows="3"
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        placeholder="Ange beskrivning..."
+                        ></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Välj typ</label>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="type" value="Layout" class="h-4 w-4 text-purple-500 border-gray-300 rounded focus:ring-purple-400">
+                            <span class="text-gray-700">Layout</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="type" value="Färg" class="h-4 w-4 text-purple-500 border-gray-300 rounded focus:ring-purple-400">
+                            <span class="text-gray-700">Färg</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="type" value="Typografi" class="h-4 w-4 text-purple-500 border-gray-300 rounded focus:ring-purple-400">
+                            <span class="text-gray-700">Typografi</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="type" value="Skugga" class="h-4 w-4 text-purple-500 border-gray-300 rounded focus:ring-purple-400">
+                            <span class="text-gray-700">Skugga</span>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                            <input type="checkbox" name="type" value="Spacing" class="h-4 w-4 text-purple-500 border-gray-300 rounded focus:ring-purple-400">
+                            <span class="text-gray-700">Spacing</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="favourite" class="block text-sm font-medium text-gray-700 mb-1">Favoritnivå</label>
+                        <select
+                            id="favourite"
+                            name="favourite"
+                            class="w-full border border-gray-300 rounded-lg px-3 py-2 bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-400 hover:border-purple-400 appearance-none"
+                        >
+                            <option value="">Välj ett alternativ</option>
+                            <option>Gillar mycket</option>
+                            <option>Okej</option>
+                            <option>Inte min stil</option>
+                        </select>
+                    </div>
+                    <button
+                        type="submit"
+                        class="w-full bg-indigo-500 text-white font-semibold py-2 rounded-lg hover:bg-indigo-600 transition mb-7"
+                        >
+                        Lägg till
+                    </button>
+                </form>
+            </div>
+            <div class="overflow-hidden">
+                <table id="classTable" class="min-w-full border-collapse">
+                <thead class="bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100">
+                    <tr>
+                    <th class="px-4 py-2 text-left font-semibold text-gray-700">Klassnamn</th>
+                    <th class="px-4 py-2 text-left font-semibold text-gray-700">Beskrivning</th>
+                    <th class="px-4 py-2 text-left font-semibold text-gray-700">Typ</th>
+                    <th class="px-4 py-2 text-left font-semibold text-gray-700">Favoritnivå</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="bg-white hover:bg-purple-50">
+                        <td class="px-4 py-2">text-center</td>
+                        <td class="px-4 py-2">Centrerar text </td>
+                        <td class="px-4 py-2">Typografi</td>
+                        <td class="px-4 py-2">Gillar mycket</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-pink-50">
+                        <td class="px-4 py-2">bg-indigo-500</td>
+                        <td class="px-4 py-2">Indigo bakgrundsfärg</td>
+                        <td class="px-4 py-2">Färg</td>
+                        <td class="px-4 py-2">Gillar mycket</td>
+                    </tr>
+                    <tr class="bg-white hover:bg-pink-50">
+                        <td class="px-4 py-2">rounded-xl</td>
+                        <td class="px-4 py-2">Rundade hörn</td>
+                        <td class="px-4 py-2">Layout</td>
+                        <td class="px-4 py-2">Okej</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-2">shadow-lg</td>
+                        <td class="px-4 py-2">Lägger till stor skugga</td>
+                        <td class="px-4 py-2">Skugga</td>
+                        <td class="px-4 py-2">Okej</td>
+                    </tr>
+                    <tr class="hover:bg-purple-50">
+                        <td class="px-4 py-2">p-4</td>
+                        <td class="px-4 py-2">Padding runt innehåll</td>
+                        <td class="px-4 py-2">Spacing</td>
+                        <td class="px-4 py-2">Gillar mycket</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script>
+        const form = document.getElementById('addForm');
+        const table = document.getElementById('classTable').querySelector('tbody');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const classname = document.getElementById('classname').value.trim();
+            const description = document.getElementById('description').value.trim();
+            const favourite = document.getElementById('favourite').value;
+            const types = Array.from(document.querySelectorAll('input[name="type"]:checked')).map(cb => cb.value).join(', ');
+
+            if (!classname || !description || !types || !favourite) {
+                alert('Fyll i alla fält!');
+                return;
+            }
+
+            const row = document.createElement('tr');
+            row.classList.add('hover:bg-purple-50');
+            row.innerHTML = `
+                <td class="px-4 py-2">${classname}</td>
+                <td class="px-4 py-2">${description}</td>
+                <td class="px-4 py-2">${types}</td>
+                <td class="px-4 py-2">${favourite}</td>
+            `;
+            table.appendChild(row);
+            form.reset();
+        });
+    </script>
 </body>
 </html>
