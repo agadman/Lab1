@@ -3,22 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicera - Lab 1</title>
-    <link href="./output.css" rel="stylesheet">
+    <title>Publicering - Lab 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">CSS ramverk</a>
-            <ul>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
-                <li><a href="publish.html">Publicering</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: var(--bs-pink);">
+            <div class="container">
+                <a href="index.html" class="navbar-brand fw-bold">CSS Ramverk</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="tailwind.html" class="nav-link">Tailwind</a></li>
+                        <li class="nav-item"><a href="bootstrap.html" class="nav-link">Bootstrap</a></li>
+                        <li class="nav-item"><a href="publish.html" class="nav-link active">Publicering</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
-        
-    </main>    
+    <main class="container my-5">
+        <h1 class="text-center display-6 my-5 fw-bold" style="color: var(--bs-indigo);">Publicering</h1>
+
+        <section class="card shadow rounded mx-auto" style="max-width: 800px;">
+            <div class="card-body p-4">
+                <h2 class="fs-6 text-uppercase mb-3" style="color: var(--bs-purple);">Vald publiceringsplattform</h2>
+                <p>
+                    Jag har valt att publicera min webbplats via <strong>GitHub Pages</strong>. 
+                    Det är en gratis plattform från GitHub som gör det enkelt att publicera statiska webbplatser direkt från ett Git-repo.
+                </p>
+
+                <h2 class="fs-6 text-uppercase mt-4 mb-3" style="color: var(--bs-purple);">Kodstöd och språk</h2>
+                <p>
+                    GitHub Pages stödjer HTML, CSS och JavaScript, vilket gör den perfekt för enklare frontend-projekt. 
+                    Eftersom den inte kör någon backend-kod, passar den bäst för statiska webbplatser eller frontends som kommunicerar med API:er.
+                </p>
+
+                <h2 class="fs-6 text-uppercase mt-4 mb-3" style="color: var(--bs-purple);">För- och nackdelar</h2>
+                <ul class="mb-4">
+                    <li><strong>Fördelar:</strong> Gratis, enkelt att använda, integrerat med Git-versionering, stabilt och säkert.</li>
+                    <li><strong>Nackdelar:</strong> Stödjer inte serverbaserad kod (t.ex. PHP, Node.js), viss konfiguration kan krävas för egna domäner.</li>
+                </ul>
+
+                <h2 class="fs-6 text-uppercase mt-4 mb-3" style="color: var(--bs-purple);">Arbetssätt vid publicering</h2>
+                <p>
+                    För att publicera webbplatsen laddar man upp sina filer till ett GitHub-repo, 
+                    och aktiverar sedan GitHub Pages i projektets inställningar (<em>Settings → Pages</em>). 
+                    När man pushar nya ändringar från Visual Studio Code till GitHub uppdateras webbplatsen automatiskt.
+                </p>
+                <p>
+                    I mitt fall behöver jag först köra <code>npm run build</code> för att generera min färdiga 
+                    <code>output.css</code> från Tailwind, innan jag pushar till GitHub. Bootstrap-sidorna använder CDN och kräver ingen extra byggprocess.
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
