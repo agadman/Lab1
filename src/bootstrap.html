@@ -4,21 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap - Lab 1</title>
-    <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="index.html">CSS ramverk</a>
-            <ul>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
-                <li><a href="publish.html">Publicering</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--bs-pink);">
+            <div class="container">
+                <a href="index.html" class="nav-link navbar-brand">CSS Ramverk</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="tailwind.html" class="nav-link">Tailwind</a></li>
+                    <li class="nav-item"><a href="bootstrap.html" class="nav-link active">Bootstrap</a></li>
+                    <li class="nav-item"><a href="publish.html" class="nav-link">Publicering</a></li>
+                    </ul>
+                </div>
+            </div>   
         </nav>
     </header>
+
     <main>
-        
-    </main>    
+        <h1 class="text-center display-6 my-5 fw-bold" style="color: var(--bs-indigo);">Bootstrap</h1>
+        <div class="container">
+            <section class="card shadow rounded mx-auto mb-5" style="max-width: 700px;">
+                <div class="card-body">
+                    <h2 class="fs-6 text-uppercase" style="color: var(--bs-purple);">Om Bootstrap</h2>
+                    <p>
+                        Bootstrap är ett komponentbaserat CSS-ramverk som gör det enkelt att skapa responsiva och mobilanpassade webbplatser.
+                        Det erbjuder en mängd fördesignade komponenter som knappar, formulär, navigationsmenyer och mycket mer.
+                        Bootstrap använder ett 12-kolumners rutnätssystem för layout, vilket gör det enkelt att skapa flexibla och anpassningsbara designs.
+                    </p>
+                    <p class="mb-4">Läs mer på <a href="https://getbootstrap.com" target="_blank" style="color: var(--bs-indigo);">getbootstrap.com</a>.</p>
+                    <h2 class="fs-6 text-uppercase" style="color: var(--bs-purple);">Utvärdering</h2>
+                    <p>Jag gillar Bootstrap för att det är ett välstrukturerat och lättanvänt ramverk som gör att jag snabbt kan bygga en webbplats. Jag tycker om komponentbasen, vilket gör det enkelt att återanvända kod och hålla en konsekvent design.</p>
+                    <p>Det kan dock vara lite tungt och ibland svårt att göra små justeringar. Även här blev koden ganska kompakt och svår att läsa på grund av de färdiga stilarna och de inbyggda klasserna. Färgerna var också lite svårare att anpassa exakt, och jag märkte att det inte alltid var lätt att matcha dem med Tailwind eller webbplatsens övriga palett.</p>
+                    <p>Jag tycker det finns bra dokumentationen och det verkar finnas ett stort community, vilket gör att man hyfsat enkelt hittar lösningar på problem.</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="container my-5">
+            <section class="card shadow-lg rounded mx-auto p-4" style="max-width: 700px;">
+                <h2 class="text-cstart mb-4 fs-5">Lägg till ny rad</h2>
+                
+                <form id="addForm">
+                    <div class="mb-3">
+                        <label for="classname" class="form-label">Klassnamn</label>
+                        <input 
+                        type="text" 
+                        id="classname" 
+                        name="classname" 
+                        class="form-control" 
+                        placeholder="Ange klassnamn..." 
+                        required
+                        >
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Beskrivning</label>
+                        <textarea 
+                        id="description" 
+                        name="description" 
+                        class="form-control" 
+                        rows="3" 
+                        placeholder="Ange beskrivning..." 
+                        required
+                        ></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label d-block mb-2">Välj typ</label>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="type" value="Layout" id="type-layout">
+                        <label class="form-check-label" for="type-layout">Layout</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="type" value="Färg" id="type-farg">
+                        <label class="form-check-label" for="type-farg">Färg</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="type" value="Typografi" id="type-typografi">
+                        <label class="form-check-label" for="type-typografi">Typografi</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="type" value="Skugga" id="type-skugga">
+                        <label class="form-check-label" for="type-skugga">Skugga</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="type" value="Spacing" id="type-spacing">
+                        <label class="form-check-label" for="type-spacing">Spacing</label>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="favourite" class="form-label">Favoritnivå</label>
+                        <select id="favourite" name="favourite" class="form-select" required>
+                        <option value="">Välj ett alternativ</option>
+                        <option>Gillar mycket</option>
+                        <option>Okej</option>
+                        <option>Inte min stil</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-center">
+                            <button type="submit" 
+                                    class="btn w-100 d-flex justify-content-center align-items-center py-2" 
+                                    style="background-color: var(--bs-purple); color: white;">
+                                <i class="bi bi-plus-circle me-2"></i>Lägg till
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <table id="classTable" class="table table-striped table-hover my-4">
+                <thead class="table-danger">
+                    <tr>
+                        <th>Klassnamn</th>
+                        <th>Beskrivning</th>
+                        <th>Typ</th>
+                        <th>Favoritnivå</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>text-center</td>
+                        <td>Centrerar text</td>
+                        <td>Typografi</td>
+                        <td>Gillar mycket</td>
+                    </tr>
+                    <tr>
+                        <td>bg-primary</td>
+                        <td>Blå bakgrundsfärg</td>
+                        <td>Färg</td>
+                        <td>Gillar mycket</td>
+                    </tr>
+                    <tr>
+                        <td>rounded</td>
+                        <td>Rundade hörn</td>
+                        <td>Layout</td>
+                        <td>Okej</td>
+                    </tr>
+                    <tr>
+                        <td>shadow</td>
+                        <td>Lägger till skugga</td>
+                        <td>Skugga</td>
+                        <td>Gillar mycket</td>
+                    </tr>
+                    <tr>
+                        <td>p-3</td>
+                        <td>Lägger till padding</td>
+                        <td>Spacing</td>
+                        <td>Gillar mycket</td>
+                    </tr>
+                </tbody>
+            </table>
+            </section>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const form = document.getElementById('addForm');
+        const table = document.getElementById('classTable').querySelector('tbody');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const classname = document.getElementById('classname').value.trim();
+            const description = document.getElementById('description').value.trim();
+            const favourite = document.getElementById('favourite').value;
+            const types = Array.from(document.querySelectorAll('input[name="type"]:checked')).map(cb => cb.value).join(', ');
+
+            if (!classname || !description || !types || !favourite) {
+                alert('Fyll i alla fält!');
+                return;
+            }
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${classname}</td>
+                <td>${description}</td>
+                <td>${types}</td>
+                <td>${favourite}</td>
+            `;
+            table.appendChild(row);
+            form.reset();
+        });
+    </script>
 </body>
 </html>

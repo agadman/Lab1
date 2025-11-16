@@ -6,7 +6,7 @@
     <title>CSS ramverk - Lab 1</title>
     <link href="./output.css" rel="stylesheet">
 </head>
-<body class="min-h-screen bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-white relative overflow-hidden">
+<body class="min-h-screen bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-white relative">
     <div class="absolute inset-0 bg-black/30"></div> <!-- Overlay -->
     
     <header class="relative z-10">
@@ -22,16 +22,20 @@
         </nav>
     </header>
 
-    <main class="relative z-10 flex flex-col justify-center items-center min-h-[80vh] text-center px-6">
+    <main class="relative z-10 flex flex-col justify-center items-center min-h-[80vh] text-center px-6 mt-10 sm:mt-0">
         <h1 class="text-4xl sm:text-5xl font-bold mb-6 drop-shadow-lg">Laboration 1: CSS-ramverk</h1>
-        <p class="max-w-2xl text-base sm:text-lg text-gray-100 mb-10">
-            Denna laboration handlar om att testa och jämföra olika CSS-ramverk.
+        <p class="max-w-2xl text-base sm:text-lg text-gray-100 mb-5">
+            Den här webbplatsen har skapats inom ramen för kursen <em>Fullstack-utveckling med ramverk</em> hos Mittuniversitetet. Syftet är att utforska och jämföra olika CSS-ramverk genom praktisk användning. Målet är att både få en överblick över vanliga ramverk och att utvärdera deras styrkor, svagheter och arbetsflöden i webbutveckling.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 sm:space-x-6">
-            <a href="tailwind.html" class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-purple-100 transition">
+        <p class="max-w-2xl text-base sm:text-lg text-gray-100 mb-5">I uppgiften ingår även att testa en modern publiceringsmetod som inte använder FTP, för att få erfarenhet av hur dagens webbutvecklingsflöden ofta fungerar.</p>
+        <p class="max-w-2xl text-base sm:text-lg text-gray-100 mb-10">Jag har valt att arbeta med de två populära ramverken Tailwind och Bootstrap.</p>
+        <div class="flex flex-col sm:flex-row gap-4 sm:space-x-6 w-full max-w-md mb-20 sm:mb-0">
+            <a href="tailwind.html"
+            class="w-full sm:w-40 bg-white text-purple-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-purple-100 transition text-center">
                 Tailwind
             </a>
-            <a href="bootstrap.html" class="bg-white text-purple-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-purple-100 transition">
+            <a href="bootstrap.html"
+            class="w-full sm:w-40 bg-white text-purple-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-purple-100 transition text-center">
                 Bootstrap
             </a>
         </div>
